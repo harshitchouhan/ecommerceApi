@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    protected $fillable = ['cityname', 'citycode', 'cityactive'];
+    protected $fillable = ['cityid', 'cityname', 'citycode', 'cityactive'];
+
+    protected $primaryKey = 'cityid';
 
     public $transformer = CityTransformer::class;
 

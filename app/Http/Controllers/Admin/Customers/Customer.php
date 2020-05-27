@@ -9,7 +9,9 @@ class Customer extends Model
 {
     use ImageUpload;
 
-    protected $fillable = ['cname', 'cemail', 'cimage', 'caddressline1', 'caddressline2', 'ccity', 'cstate', 'czipcode', 'cgoogleid', 'cfaceboookid', 'clinkedinid', 'cstatus', 'cphone', 'calternatephone'];
+    protected $fillable = ['cid', 'cname', 'cemail', 'cimage', 'caddressline1', 'caddressline2', 'ccity', 'cstate', 'czipcode', 'cgoogleid', 'cfaceboookid', 'clinkedinid', 'cstatus', 'cphone', 'calternatephone'];
+
+    protected $primaryKey = 'cid';
 
     public $transformer = CustomerTransformer::class;
 

@@ -14,13 +14,13 @@ class CustomerAddressTransformer extends TransformerAbstract
     public function transform(CustomerAddress $customerAddress)
     {
         return [
-            'id' => $customerAddress->id,
-            'OwnerName' => $customerAddress->caownername,
-            'Address1' => $customerAddress->caaddressline1,
-            'Address2' => $customerAddress->caaddressline2,
-            'City' => $customerAddress->cacity,
-            'State' => $customerAddress->castate,
-            'Zipcode' => $customerAddress->cazipcode,
+            'customerAddressId' => $customerAddress->caid,
+            'ownerName' => $customerAddress->caownername,
+            'address1' => $customerAddress->caaddressline1,
+            'address2' => $customerAddress->caaddressline2,
+            'city' => $customerAddress->cacity,
+            'state' => $customerAddress->castate,
+            'zipcode' => $customerAddress->cazipcode,
             'created_at' => $customerAddress->created_at,
             'updated_at' => $customerAddress->updated_at,
         ];
@@ -29,13 +29,13 @@ class CustomerAddressTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'OwnerName' => 'caownername',
-            'Address1' => 'caaddressline1',
-            'Address2' => 'caaddressline2',
-            'City' => 'cacity',
-            'State' => 'castate',
-            'Zipcode' => 'cazipcode',
+            'customerAddressId' => 'caid',
+            'ownerName' => 'caownername',
+            'address1' => 'caaddressline1',
+            'address2' => 'caaddressline2',
+            'city' => 'cacity',
+            'state' => 'castate',
+            'zipcode' => 'cazipcode',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -46,13 +46,13 @@ class CustomerAddressTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'caownername' => 'OwnerName',
-            'caaddressline1' => 'Address1',
-            'caaddressline2' => 'Address2',
-            'cacity' => 'City',
-            'castate' => 'State',
-            'cazipcode' => 'Zipcode',
+            'caid' => 'customerAddressId',
+            'caownername' => 'ownerName',
+            'caaddressline1' => 'address1',
+            'caaddressline2' => 'address2',
+            'cacity' => 'city',
+            'castate' => 'state',
+            'cazipcode' => 'zipcode',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

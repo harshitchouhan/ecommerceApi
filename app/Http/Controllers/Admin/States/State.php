@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
-    protected $fillable = ['statename', 'statecode', 'stateactive'];
+    protected $fillable = ['stateid', 'statename', 'statecode', 'stateactive'];
+
+    protected $primaryKey = 'stateid';
 
     public $transformer = StateTransformer::class;
 

@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wishlist extends Model
 {
-    protected $fillable = ['wcid', 'wpid'];
+    protected $fillable = ['wid', 'wcid', 'wpid'];
+
+    protected $primaryKey = 'wid';
 
     public $transformer = WishlistTransformer::class;
 

@@ -14,7 +14,7 @@ class CreateProductAttributeRelationsTable extends Migration
     public function up()
     {
         Schema::create('product_attribute_relations', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('parid');
             $table->integer('parpid');
             $table->integer('paraid');
             $table->integer('parvid');

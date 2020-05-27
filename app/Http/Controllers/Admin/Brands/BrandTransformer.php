@@ -15,7 +15,7 @@ class BrandTransformer extends TransformerAbstract
     public function transform(Brand $brand)
     {
         return [
-            'id' => $brand->id,
+            'brandId' => $brand->Bid,
             'title' => $brand->Btitle,
             'detail' => $brand->Bdetail,
             'image' => $brand->Bimage,
@@ -28,7 +28,7 @@ class BrandTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
+            'brandId' => 'Bid',
             'title' => 'Btitle',
             'detail' => 'Bdetail',
             'image' => 'Bimage',
@@ -43,7 +43,7 @@ class BrandTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
+            'Bid' => 'brandId',
             'Btitle' => 'title',
             'Bdetail' => 'detail',
             'Bimage' => 'image',

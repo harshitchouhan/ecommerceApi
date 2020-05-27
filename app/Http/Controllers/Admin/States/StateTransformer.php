@@ -14,20 +14,20 @@ class StateTransformer extends TransformerAbstract
     public function transform(State $state)
     {
         return [
-            'id' => $state->id,
-            'Name' => $state->statename,
-            'Code' => $state->statecode,
-            'Status' => $state->stateactive,
+            'stateId' => $state->stateid,
+            'name' => $state->statename,
+            'code' => $state->statecode,
+            'status' => $state->stateactive,
         ];
     }
 
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'Name' => 'statename',
-            'Code' => 'statecode',
-            'Status' => 'stateactive',
+            'stateId' => 'stateid',
+            'name' => 'statename',
+            'code' => 'statecode',
+            'status' => 'stateactive',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -38,10 +38,10 @@ class StateTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'statename' => 'Name',
-            'statecode' => 'Code',
-            'stateactive' => 'Status',
+            'stateid' => 'stateId',
+            'statename' => 'name',
+            'statecode' => 'code',
+            'stateactive' => 'status',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

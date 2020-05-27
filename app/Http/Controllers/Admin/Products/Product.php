@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use ImageUpload;
-    protected $fillable = ['Pcode', 'PbrandId', 'PcategoryId', 'Pname', 'Pdescription', 'PsellerId', 'Pwholesaleprice', 'Pretailprice', 'Psaleprice', 'Pstatus', 'Pimage1', 'Pimage2', 'Pimage3', 'Pimage4', 'Pimage5', 'Pvideo', 'Pmetatitle', 'Pmetakeyword', 'Pmetadescription', 'PrelatedProducts'];
+    protected $fillable = ['pid', 'pcode', 'pbrandid', 'pcategoryId', 'pname', 'pdescription', 'psellerId', 'pwholesaleprice', 'pretailprice', 'psaleprice', 'pstatus', 'pimage1', 'pimage2', 'pimage3', 'pimage4', 'pimage5', 'pvideo', 'pmetatitle', 'pmetakeyword', 'pmetadescription', 'prelatedproducts'];
+
+    protected $primaryKey = "pid";
+
 
     public $transformer = ProductTransformer::class;
 
@@ -29,32 +32,32 @@ class Product extends Model
         $data = $request->all();
 
         if ($request->has('image1')) {
-            $filePath = $this->getImage($request, 'image1', $request->Pname, 'products', 1);
-            $data['Pimage1'] = 'http://ecommerce.test/app/public/' . $filePath;
+            $filePath = $this->getImage($request, 'image1', $request->pname, 'products', 1);
+            $data['pimage1'] = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
         if ($request->has('image2')) {
-            $filePath = $this->getImage($request, 'image2', $request->Pname, 'products', 2);
-            $data['Pimage2'] = 'http://ecommerce.test/app/public/' . $filePath;
+            $filePath = $this->getImage($request, 'image2', $request->pname, 'products', 2);
+            $data['pimage2'] = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
         if ($request->has('image3')) {
-            $filePath = $this->getImage($request, 'image3', $request->Pname, 'products', 3);
-            $data['Pimage3'] = 'http://ecommerce.test/app/public/' . $filePath;
+            $filePath = $this->getImage($request, 'image3', $request->pname, 'products', 3);
+            $data['pimage3'] = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
         if ($request->has('image4')) {
-            $filePath = $this->getImage($request, 'image4', $request->Pname, 'products', 4);
-            $data['Pimage4'] = 'http://ecommerce.test/app/public/' . $filePath;
+            $filePath = $this->getImage($request, 'image4', $request->pname, 'products', 4);
+            $data['pimage4'] = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
         if ($request->has('image5')) {
-            $filePath = $this->getImage($request, 'image5', $request->Pname, 'products', 5);
-            $data['Pimage5'] = 'http://ecommerce.test/app/public/' . $filePath;
+            $filePath = $this->getImage($request, 'image5', $request->pname, 'products', 5);
+            $data['pimage5'] = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
-        $data['Pvideo'] = 'video-1.mp4';
-        $data['PrelatedProdcuts'] = '0';
+        $data['pvideo'] = 'video-1.mp4';
+        $data['prelatedProdcuts'] = '0';
 
         $product = Product::create($data);
         return $product;
@@ -65,86 +68,86 @@ class Product extends Model
 
         $product = $this->getProduct($id);
 
-        if ($request->has('Pcode')) {
-            $product->Pcode = $request->Pcode;
+        if ($request->has('pcode')) {
+            $product->pcode = $request->pcode;
         }
 
-        if ($request->has('PbrandId')) {
-            $product->PbrandId = $request->PbrandId;
+        if ($request->has('pbrandid')) {
+            $product->pbrandid = $request->pbrandid;
         }
 
-        if ($request->has('PcategoryId')) {
-            $product->PcategoryId = $request->PcategoryId;
+        if ($request->has('pcategoryid')) {
+            $product->pcategoryid = $request->pcategoryid;
         }
 
-        if ($request->has('Pname')) {
-            $product->Pname = $request->Pname;
+        if ($request->has('pname')) {
+            $product->pname = $request->pname;
         }
 
-        if ($request->has('Pdescription')) {
-            $product->Pdescription = $request->Pdescription;
+        if ($request->has('pdescription')) {
+            $product->pdescription = $request->pdescription;
         }
 
-        if ($request->has('PsellerId')) {
-            $product->PsellerId = $request->PsellerId;
+        if ($request->has('psellerid')) {
+            $product->psellerid = $request->psellerid;
         }
 
-        if ($request->has('Pwholesaleprice')) {
-            $product->Pwholesaleprice = $request->Pwholesaleprice;
+        if ($request->has('pwholesaleprice')) {
+            $product->pwholesaleprice = $request->pwholesaleprice;
         }
 
-        if ($request->has('Pretailprice')) {
-            $product->Pretailprice = $request->Pretailprice;
+        if ($request->has('pretailprice')) {
+            $product->pretailprice = $request->pretailprice;
         }
 
-        if ($request->has('Psaleprice')) {
-            $product->Psaleprice = $request->Psaleprice;
+        if ($request->has('psaleprice')) {
+            $product->psaleprice = $request->psaleprice;
         }
 
-        if ($request->has('Pstatus')) {
-            $product->Pstatus = $request->Pstatus;
+        if ($request->has('pstatus')) {
+            $product->pstatus = $request->pstatus;
         }
 
-        if ($request->has('Pimage1')) {
-            $filePath = $this->getImage($request, 'image1', $request->Pname, 'products', 1);
-            $product->Pimage1 = 'http://ecommerce.test/app/public/' . $filePath;
+        if ($request->has('pimage1')) {
+            $filePath = $this->getImage($request, 'image1', $request->pname, 'products', 1);
+            $product->pimage1 = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
-        if ($request->has('Pimage2')) {
-            $filePath = $this->getImage($request, 'image2', $request->Pname, 'products', 2);
-            $product->Pimage2 = 'http://ecommerce.test/app/public/' . $filePath;
+        if ($request->has('pimage2')) {
+            $filePath = $this->getImage($request, 'image2', $request->pname, 'products', 2);
+            $product->pimage2 = 'http://ecommerce.test/app/public/' . $filePath;
         }
 
-        if ($request->has('Pimage3')) {
-            $filePath = $this->getImage($request, 'image3', $request->Pname, 'products', 3);
-            $product->Pimage3 = 'http://ecommerce.test/app/public/' . $filePath;        }
+        if ($request->has('pimage3')) {
+            $filePath = $this->getImage($request, 'image3', $request->pname, 'products', 3);
+            $product->pimage3 = 'http://ecommerce.test/app/public/' . $filePath;        }
 
-        if ($request->has('Pimage4')) {
-            $filePath = $this->getImage($request, 'image4', $request->Pname, 'products', 4);
-            $product->Pimage4 = 'http://ecommerce.test/app/public/' . $filePath;        }
+        if ($request->has('pimage4')) {
+            $filePath = $this->getImage($request, 'image4', $request->pname, 'products', 4);
+            $product->pimage4 = 'http://ecommerce.test/app/public/' . $filePath;        }
 
-        if ($request->has('Pimage5')) {
-            $filePath = $this->getImage($request, 'image5', $request->Pname, 'products', 5);
-            $product->Pimage5 = 'http://ecommerce.test/app/public/' . $filePath;        }
+        if ($request->has('pimage5')) {
+            $filePath = $this->getImage($request, 'image5', $request->pname, 'products', 5);
+            $product->pimage5 = 'http://ecommerce.test/app/public/' . $filePath;        }
 
-        if ($request->has('Pvideo')) {
-            $product->Pvideo = $request->Pvideo;
+        if ($request->has('pvideo')) {
+            $product->pvideo = $request->pvideo;
         }
 
-        if ($request->has('Pmetatitle')) {
-            $product->Pmetatitle = $request->Pmetatitle;
+        if ($request->has('pmetatitle')) {
+            $product->pmetatitle = $request->pmetatitle;
         }
 
-        if ($request->has('Pmetakeyword')) {
-            $product->Pmetakeyword = $request->Pmetakeyword;
+        if ($request->has('pmetakeyword')) {
+            $product->pmetakeyword = $request->pmetakeyword;
         }
 
-        if ($request->has('Pmetadescription')) {
-            $product->Pmetadescription = $request->Pmetadescription;
+        if ($request->has('pmetadescription')) {
+            $product->pmetadescription = $request->pmetadescription;
         }
 
-        if ($request->has('PrelatedProducts')) {
-            $product->PrelatedProducts = $request->PrelatedProducts;
+        if ($request->has('prelatedProducts')) {
+            $product->prelatedProducts = $request->prelatedProducts;
         }
 
         if (!$product->isDirty()) {
@@ -158,11 +161,11 @@ class Product extends Model
     public function deleteProduct($id)
     {
         $product = $this->getProduct($id);
-        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->Pimage1));
-        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->Pimage2));
-        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->Pimage3));
-        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->Pimage4));
-        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->Pimage5));
+        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->pimage1));
+        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->pimage2));
+        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->pimage3));
+        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->pimage4));
+        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $product->pimage5));
         $product->delete();
         return $product;
     }

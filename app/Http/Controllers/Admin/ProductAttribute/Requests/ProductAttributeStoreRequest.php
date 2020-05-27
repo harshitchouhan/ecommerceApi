@@ -24,10 +24,10 @@ class ProductAttributeStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'PAname' => 'required|max:150',
-            'PAvalue' => 'required|integer',
-            'PAdetail' => 'required|max:1000',
-            'PAimage' => 'image|mimes:png,jpg|max:2048'
+            'paname' => 'required|max:150',
+            'pavalue' => 'required|integer',
+            'padetail' => 'required|max:1000',
+            'paimage' => 'image|mimes:png,jpg|max:2048'
         ];
     }
 }

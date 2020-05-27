@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ProductAttribute extends Model
 {
     use ImageUpload;
-    protected $fillable = ['PAname', 'PAvalue', 'PAdetail', 'PAfilter', 'PAstatus', 'PAimage', 'PAcategory'];
+    protected $fillable = ['paid', 'paname', 'pavalue', 'padetail', 'pafilter', 'pastatus', 'paimage', 'pacategory'];
+
+    protected $primaryKey = "paid";
 
     public $transformer = ProductAttributeTransformer::class;
 
@@ -29,11 +31,11 @@ class ProductAttribute extends Model
         $data = $request->all();
 
         if ($request->has('image')) {
-            $filePath = $this->getImage($request, 'image', $request->PAname, 'productAttributes');
-            $data['PAimage'] = 'http://ecommerce.test/app/public' . $filePath;
+            $filePath = $this->getImage($request, 'image', $request->paname, 'productAttributes');
+            $data['paimage'] = 'http://ecommerce.test/app/public' . $filePath;
         }
 
-        $data['PAstatus'] = '0';
+        $data['pastatus'] = '0';
 
         $productAttribute = ProductAttribute::create($data);
         return $productAttribute;
@@ -43,33 +45,33 @@ class ProductAttribute extends Model
     {
         $productAttribute = $this->getProductAttribute($id);
 
-        if ($request->has('PAname')) {
-            $productAttribute->PAname = $request->PAname;
+        if ($request->has('paname')) {
+            $productAttribute->paname = $request->paname;
         }
 
-        if ($request->has('PAvalue')) {
-            $productAttribute->PAvalue = $request->PAvalue;
+        if ($request->has('pavalue')) {
+            $productAttribute->pavalue = $request->pavalue;
         }
 
-        if ($request->has('PAdetail')) {
-            $productAttribute->PAdetail = $request->PAdetail;
+        if ($request->has('padetail')) {
+            $productAttribute->padetail = $request->padetail;
         }
 
-        if ($request->has('PAfilter')) {
-            $productAttribute->PAfilter = $request->PAfilter;
+        if ($request->has('pafilter')) {
+            $productAttribute->pafilter = $request->pafilter;
         }
 
-        if ($request->has('PAstatus')) {
-            $productAttribute->PAstatus = $request->PAstatus;
+        if ($request->has('pastatus')) {
+            $productAttribute->pastatus = $request->pastatus;
         }
 
-        if ($request->has('PAimage')) {
-            $filePath = $this->getImage($request, 'image', $request->PAname, 'productAttributes');
-            $data['PAimage'] = 'http://ecommerce.test/app/public' . $filePath;
+        if ($request->has('paimage')) {
+            $filePath = $this->getImage($request, 'image', $request->paname, 'productAttributes');
+            $data['paimage'] = 'http://ecommerce.test/app/public' . $filePath;
         }
 
-        if ($request->has('PAcategory')) {
-            $productAttribute->PAcategory = $request->PAcategory;
+        if ($request->has('pacategory')) {
+            $productAttribute->pacategory = $request->pacategory;
         }
 
         if (!$productAttribute->isDirty()) {
@@ -83,7 +85,7 @@ class ProductAttribute extends Model
     public function deleteProductAttribute($id)
     {
         $productAttribute = $this->getProductAttribute($id);
-        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $productAttribute->PAimage));
+        $this->imageDelete(str_replace('http://ecommerce.test/app/public', '', $productAttribute->paimage));
         $productAttribute->delete();
         return $productAttribute;
     }

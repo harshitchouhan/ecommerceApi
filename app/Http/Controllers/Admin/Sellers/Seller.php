@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Seller extends Model
 {
     use ImageUpload;
-    protected $fillable = ['sname', 'semail', 'simage', 'saddressline1', 'saddressline2', 'scity', 'sstate', 'szipcode', 'sgoogleid', 'sfaceboookid', 'slinkedinid', 'sstatus', 'sphone', 'salternatephone'];
+    protected $fillable = ['sid', 'sname', 'semail', 'simage', 'saddressline1', 'saddressline2', 'scity', 'sstate', 'szipcode', 'sgoogleid', 'sfaceboookid', 'slinkedinid', 'sstatus', 'sphone', 'salternatephone'];
+
+    protected $primaryKey = 'sid';
 
     public $transformer = SellerTransformer::class;
 

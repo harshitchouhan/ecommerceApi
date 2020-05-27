@@ -32,15 +32,9 @@ class TransformInput
         if (isset($response->exception) && $response->exception instanceof ValidationException) {
             $data = $response->getData();
             $transformedErrors = [];
-            // dd($transformer);
             foreach ($data->error as $field => $error) {
-
                 $transformedField = $transformer::transformedAttribute($field);
-                if (!$transformer == 'App\Http\Controllers\Admin\ProductAttribute\ProductAttributeTransformer') {
-                    $transformedErrors[$transformedField] = str_replace(strtolower($field), $transformedField, $error);
-                }
-
-                $transformedErrors[$transformedField] = str_replace(strtolower($field), $transformedField, str_replace('p a', 'pa', $error));
+                $transformedErrors[$transformedField] = str_replace(strtolower($field), $transformedField, $error);
             }
 
             $data->error = $transformedErrors;

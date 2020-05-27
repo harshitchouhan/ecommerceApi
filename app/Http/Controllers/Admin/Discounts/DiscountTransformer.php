@@ -15,32 +15,32 @@ class DiscountTransformer extends TransformerAbstract
     public function transform(Discount $discount)
     {
         return [
-            'id' => $discount->id,
-            'Name' => $discount->dname,
-            'Code' => $discount->dcode,
-            'Value' => $discount->dvalue,
-            'Type' => $discount->dtype,
-            'Uses' => $discount->duses,
-            'StartDate' => $discount->dstartdate,
-            'ExpiryDate' => $discount->dexpirydate,
+            'discountId' => $discount->did,
+            'name' => $discount->dname,
+            'code' => $discount->dcode,
+            'value' => $discount->dvalue,
+            'type' => $discount->dtype,
+            'uses' => $discount->duses,
+            'startDate' => $discount->dstartdate,
+            'expiryDate' => $discount->dexpirydate,
             'Active' => $discount->dactive,
-            'Basis' => $discount->dbasis,
+            'basis' => $discount->dbasis,
         ];
     }
 
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'Name' => 'dname',
-            'Code' => 'dcode',
-            'Value' => 'dvalue',
-            'Type' => 'dtype',
-            'Uses' => 'duses',
-            'StartDate' => 'dstartdate',
-            'ExpiryDate' => 'dexpirydate',
-            'Active' => 'dactive',
-            'Basis' => 'dbasis',
+            'discountId' => 'did',
+            'name' => 'dname',
+            'code' => 'dcode',
+            'value' => 'dvalue',
+            'type' => 'dtype',
+            'uses' => 'duses',
+            'startDate' => 'dstartdate',
+            'expiryDate' => 'dexpirydate',
+            'active' => 'dactive',
+            'basis' => 'dbasis',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -52,16 +52,16 @@ class DiscountTransformer extends TransformerAbstract
     {
 
         $attributes = [
-            'id' => 'id',
-            'dname' => 'Name',
-            'dcode' => 'Code',
-            'dvalue' => 'Value',
-            'dtype' => 'Type',
-            'duses' => 'Uses',
-            'dstartdate' => 'StartDate',
-            'dexpirydate' => 'ExpiryDate',
-            'dactive' => 'Active',
-            'dbasis' => 'Basis',
+            'did' => 'discountId',
+            'dname' => 'name',
+            'dcode' => 'code',
+            'dvalue' => 'value',
+            'dtype' => 'type',
+            'duses' => 'uses',
+            'dstartdate' => 'startDate',
+            'dexpirydate' => 'expiryDate',
+            'dactive' => 'active',
+            'dbasis' => 'basis',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

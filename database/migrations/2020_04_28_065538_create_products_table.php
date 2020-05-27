@@ -14,27 +14,27 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('Pcode');
-            $table->integer('Pbrandid')->unsigned();;
-            $table->integer('Pcategoryid')->unsigned();;
-            $table->string('Pname');
-            $table->string('Pdescription', 1000);
-            $table->integer('PsellerId');
-            $table->float('Pwholesaleprice');
-            $table->float('Pretailprice');
-            $table->float('Psaleprice');
-            $table->enum('Pstatus', ['1', '0']);
-            $table->string('Pimage1');
-            $table->string('Pimage2');
-            $table->string('Pimage3');
-            $table->string('Pimage4');
-            $table->string('Pimage5');
-            $table->string('Pvideo');
-            $table->string('Pmetatitle', 500);
-            $table->string('Pmetakeyword', 500);
-            $table->string('Pmetadescription', 1000);
-            $table->integer('PrelatedProducts');
+            $table->increments('pid');
+            $table->integer('pcode');
+            $table->integer('pbrandid')->unsigned();;
+            $table->integer('pcategoryid')->unsigned();;
+            $table->string('pname');
+            $table->string('pdescription', 1000);
+            $table->integer('psellerId');
+            $table->float('pwholesaleprice');
+            $table->float('pretailprice');
+            $table->float('psaleprice');
+            $table->enum('pstatus', ['1', '0']);
+            $table->string('pimage1');
+            $table->string('pimage2');
+            $table->string('pimage3');
+            $table->string('pimage4');
+            $table->string('pimage5');
+            $table->string('pvideo');
+            $table->string('pmetatitle', 500);
+            $table->string('pmetakeyword', 500);
+            $table->string('pmetadescription', 1000);
+            $table->integer('prelatedproducts');
             $table->timestamps();
         });
     }

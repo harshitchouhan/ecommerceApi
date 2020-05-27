@@ -15,10 +15,10 @@ class ProductAttributeRelationTransformer extends TransformerAbstract
     public function transform(ProductAttributeRelation $productAttributeRelation)
     {
         return [
-            'id' => $productAttributeRelation->id,
-            'pid' => $productAttributeRelation->parpid,
-            'aid' => $productAttributeRelation->paraid,
-            'vid' => $productAttributeRelation->parvid,
+            'productAttributeRelationId' => $productAttributeRelation->parid,
+            'productId' => $productAttributeRelation->parpid,
+            'attributeId' => $productAttributeRelation->paraid,
+            'valueId' => $productAttributeRelation->parvid,
             'created_at' => $productAttributeRelation->created_at,
             'updated_at' => $productAttributeRelation->updated_at,
         ];
@@ -27,10 +27,10 @@ class ProductAttributeRelationTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'pid' => 'parpid',
-            'aid' => 'paraid',
-            'vid' => 'parvid',
+            'productAttributeRelationId' => 'parid',
+            'productId' => 'parpid',
+            'attributeId' => 'paraid',
+            'valueId' => 'parvid',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -42,10 +42,10 @@ class ProductAttributeRelationTransformer extends TransformerAbstract
     {
 
         $attributes = [
-            'id' => 'id',
-            'parpid' => 'pid',
-            'paraid' => 'aid',
-            'parvid' => 'vid',
+            'parid' => 'productAttributeRelationId',
+            'parpid' => 'productId',
+            'paraid' => 'attributeId',
+            'parvid' => 'valueId',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

@@ -14,7 +14,7 @@ class CreateProductAttributeValuesTable extends Migration
     public function up()
     {
         Schema::create('product_attribute_values', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('pavid');
             $table->integer('pavaid');
             $table->integer('pavvalue');
             $table->enum('pavstatus', ['1', '0']);

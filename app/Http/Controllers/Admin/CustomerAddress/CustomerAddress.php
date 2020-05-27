@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class CustomerAddress extends Model
 {
-    protected $fillable = ['caownername', 'caaddressline1', 'caaddressline2', 'cacity', 'castate', 'cazipcode'];
+    protected $fillable = ['caid', 'caownername', 'caaddressline1', 'caaddressline2', 'cacity', 'castate', 'cazipcode'];
+
+    protected $primaryKey = 'caid';
 
     public $transformer = CustomerAddressTransformer::class;
 

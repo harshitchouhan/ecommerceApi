@@ -14,18 +14,18 @@ class WishlistTransformer extends TransformerAbstract
     public function transform(Wishlist $wishlist)
     {
         return [
-            'id' => $wishlist->id,
-            'CategoryId' => $wishlist->wcid,
-            'ProductsId' => $wishlist->wpid
+            'wishListId' => $wishlist->wid,
+            'categoryId' => $wishlist->wcid,
+            'productsId' => $wishlist->wpid
         ];
     }
 
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'CategoryId' => 'wcid',
-            'ProductsId' => 'wpid',
+            'wishListId' => 'wid',
+            'categoryId' => 'wcid',
+            'productsId' => 'wpid',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -36,9 +36,9 @@ class WishlistTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'wcid' => 'CategoryId',
-            'wpid' => 'ProductsId',
+            'wid' => 'wishListId',
+            'wcid' => 'categoryId',
+            'wpid' => 'productsId',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

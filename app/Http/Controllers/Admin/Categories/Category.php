@@ -11,7 +11,10 @@ use App\Traits\ImageUpload;
 class Category extends Model
 {
     use ImageUpload;
-    protected $fillable = ['Cpid', 'Cname', 'Cdetail', 'Cimage', 'Cstatus', 'Cmetatitle', 'Cmetakeyword', 'Cmetadescription'];
+    protected $fillable = ['Cid', 'Cpid', 'Cname', 'Cdetail', 'Cimage', 'Cstatus', 'Cmetatitle', 'Cmetakeyword', 'Cmetadescription'];
+
+    protected $primaryKey = "Cid";
+
 
     public $transformer = CategoryTransformer::class;
 

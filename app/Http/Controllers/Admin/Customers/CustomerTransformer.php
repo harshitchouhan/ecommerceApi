@@ -14,7 +14,7 @@ class CustomerTransformer extends TransformerAbstract
     public function transform(Customer $customer)
     {
         return [
-            'id' => $customer->id,
+            'customerId' => $customer->cid,
             'name' => $customer->cname,
             'email' => $customer->cemail,
             'image' => $customer->cimage,
@@ -23,12 +23,12 @@ class CustomerTransformer extends TransformerAbstract
             'city' => $customer->ccity,
             'state' => $customer->cstate,
             'zipcode' => $customer->czipcode,
-            'googleid' => $customer->cgoogleid,
-            'faceboookid' => $customer->cfaceboookid,
-            'linkedinid' => $customer->clinkedinid,
+            'googleId' => $customer->cgoogleid,
+            'faceboookId' => $customer->cfaceboookid,
+            'linkedInId' => $customer->clinkedinid,
             'status' => $customer->cstatus,
             'phone' => $customer->cphone,
-            'alternatephone' => $customer->calternatephone,
+            'alternatePhone' => $customer->calternatephone,
             'created_at' => $customer->created_at,
             'updated_at' => $customer->updated_at,
         ];
@@ -37,7 +37,7 @@ class CustomerTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
+            'customerId' => 'cid',
             'name' => 'cname',
             'email' => 'cemail',
             'image' => 'cimage',
@@ -46,12 +46,12 @@ class CustomerTransformer extends TransformerAbstract
             'city' => 'ccity',
             'state' => 'cstate',
             'zipcode' => 'czipcode',
-            'googleid' => 'cgoogleid',
-            'faceboookid' => 'cfaceboookid',
-            'linkedinid' => 'clinkedinid',
+            'googleId' => 'cgoogleid',
+            'faceboookId' => 'cfaceboookid',
+            'linkedInId' => 'clinkedinid',
             'status' => 'cstatus',
             'phone' => 'cphone',
-            'alternatephone' => 'calternatephone',
+            'alternatePhone' => 'calternatephone',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -62,7 +62,7 @@ class CustomerTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
+            'cid' => 'customerId',
             'cname' => 'name',
             'cemail' => 'email',
             'cimage' => 'image',
@@ -71,12 +71,12 @@ class CustomerTransformer extends TransformerAbstract
             'ccity' => 'city',
             'cstate' => 'state',
             'czipcode' => 'zipcode',
-            'cgoogleid' => 'googleid',
-            'cfaceboookid' => 'faceboookid',
-            'clinkedinid' => 'linkedinid',
+            'cgoogleid' => 'googleId',
+            'cfaceboookid' => 'faceboookId',
+            'clinkedinid' => 'linkedInId',
             'cstatus' => 'status',
             'cphone' => 'phone',
-            'calternatephone' => 'alternatephone',
+            'calternatephone' => 'alternatePhone',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

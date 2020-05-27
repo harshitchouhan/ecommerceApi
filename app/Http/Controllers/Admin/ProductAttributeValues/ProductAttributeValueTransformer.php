@@ -15,8 +15,8 @@ class ProductAttributeValueTransformer extends TransformerAbstract
     public function transform(ProductAttributeValue $productAttributeValue)
     {
         return [
-            'id' => $productAttributeValue->id,
-            'attributeid' => $productAttributeValue->pavaid,
+            'productValueId' => $productAttributeValue->pavid,
+            'attributeId' => $productAttributeValue->pavaid,
             'value' => $productAttributeValue->pavvalue,
             'status' => $productAttributeValue->pavstatus,
             'created_at' => $productAttributeValue->created_at,
@@ -27,8 +27,8 @@ class ProductAttributeValueTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'attributeid' => 'pavaid',
+            'productValueId' => 'pavid',
+            'attributeId' => 'pavaid',
             'value' => 'pavvalue',
             'status' => 'pavstatus',
             'created_at' => 'created_at',
@@ -42,8 +42,8 @@ class ProductAttributeValueTransformer extends TransformerAbstract
     {
 
         $attributes = [
-            'id' => 'id',
-            'pavaid' => 'attributeid',
+            'pavid' => 'productValueId',
+            'pavaid' => 'attributeId',
             'pavvalue' => 'value',
             'pavstatus' => 'status',
             'created_at' => 'created_at',

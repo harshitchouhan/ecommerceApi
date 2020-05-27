@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shipping extends Model
 {
-    protected $fillable = ['sptitle', 'sprate', 'spstate', 'spactive'];
+    protected $fillable = ['spid', 'sptitle', 'sprate', 'spstate', 'spactive'];
+
+    protected $primaryKey = 'spid';
 
     public $transformer = ShippingTransformer::class;
 

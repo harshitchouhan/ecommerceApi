@@ -14,14 +14,14 @@ class ProductAttributeTransformer extends TransformerAbstract
     public function transform(ProductAttribute $productAttribute)
     {
         return [
-            'id' => $productAttribute->id,
-            'name' => $productAttribute->PAname,
-            'value' => $productAttribute->PAvalue,
-            'detail' => $productAttribute->PAdetail,
-            'filter' => $productAttribute->PAfilter,
-            'status' => $productAttribute->PAstatus,
-            'image' => $productAttribute->PAimage,
-            'category' => $productAttribute->PAcategory,
+            'productAttributeId' => $productAttribute->paid,
+            'name' => $productAttribute->paname,
+            'value' => $productAttribute->pavalue,
+            'detail' => $productAttribute->padetail,
+            'filter' => $productAttribute->pafilter,
+            'status' => $productAttribute->pastatus,
+            'image' => $productAttribute->paimage,
+            'category' => $productAttribute->pacategory,
             'created_at' => $productAttribute->created_at,
             'updated_at' => $productAttribute->updated_at,
         ];
@@ -30,14 +30,14 @@ class ProductAttributeTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'name' => 'PAname',
-            'value' => 'PAvalue',
-            'detail' => 'PAdetail',
-            'filter' => 'PAfilter',
-            'status' => 'PAstatus',
-            'image' => 'PAimage',
-            'category' => 'PAcategory',
+            'productAttributeId' => 'paid',
+            'name' => 'paname',
+            'value' => 'pavalue',
+            'detail' => 'padetail',
+            'filter' => 'pafilter',
+            'status' => 'pastatus',
+            'image' => 'paimage',
+            'category' => 'pacategory',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -49,14 +49,14 @@ class ProductAttributeTransformer extends TransformerAbstract
     {
 
         $attributes = [
-            'id' => 'id',
-            'PAname' => 'name',
-            'PAvalue' => 'value',
-            'PAdetail' => 'detail',
-            'PAfilter' => 'filter',
-            'PAstatus' => 'status',
-            'PAimage' => 'image',
-            'PAcategory' => 'category',
+            'paid' => 'productAttributeId',
+            'paname' => 'name',
+            'pavalue' => 'value',
+            'padetail' => 'detail',
+            'pafilter' => 'filter',
+            'pastatus' => 'status',
+            'paimage' => 'image',
+            'pacategory' => 'category',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

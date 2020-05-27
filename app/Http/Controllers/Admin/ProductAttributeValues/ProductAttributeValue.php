@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductAttributeValue extends Model
 {
-    protected $fillable = ['pavaid', 'pavvalue', 'pavstatus'];
+    protected $fillable = ['pavid', 'pavaid', 'pavvalue', 'pavstatus'];
+
+    protected $primaryKey = 'pavid';
 
     public $transformer = ProductAttributeValueTransformer::class;
 

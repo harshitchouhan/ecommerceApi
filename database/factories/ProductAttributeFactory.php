@@ -8,12 +8,12 @@ use Faker\Generator as Faker;
 
 $factory->define(ProductAttribute::class, function (Faker $faker) {
     return [
-        'PAname' => $faker->randomDigit,
-        'PAvalue' => $faker->randomDigit,
-        'PAdetail' => $faker->paragraph,
-        'PAfilter' => $faker->randomDigit,
-        'PAstatus' => $faker->randomElement(['1','0']),
-        'PAimage' => $faker->randomElement(['img-1.jpg', 'img-2.jpg', 'img-3.jpg']),
-        'PAcategory' => $faker->randomDigit,
+        'paname' => $faker->randomDigit,
+        'pavalue' => $faker->randomDigit,
+        'padetail' => $faker->paragraph,
+        'pafilter' => $faker->randomDigit,
+        'pastatus' => $faker->randomElement(['1','0']),
+        'paimage' => $faker->randomElement(['img-1.jpg', 'img-2.jpg', 'img-3.jpg']),
+        'pacategory' => $faker->randomDigit,
     ];
 });

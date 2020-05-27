@@ -11,7 +11,10 @@ class Brand extends Model
 {
 
     use ImageUpload;
-    protected $fillable = ['Btitle', 'Bdetail', 'Bimage', 'Bstatus'];
+    protected $fillable = ['Bid', 'Btitle', 'Bdetail', 'Bimage', 'Bstatus'];
+
+    protected $primaryKey = "Bid";
+
 
     public $transformer = BrandTransformer::class;
 

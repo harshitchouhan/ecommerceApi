@@ -14,14 +14,14 @@ class CreateProductAttributesTable extends Migration
     public function up()
     {
         Schema::create('product_attributes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('PAname');
-            $table->integer('PAvalue');
-            $table->text('PAdetail');
-            $table->string('PAfilter');
-            $table->enum('PAstatus', ['1', '0']);
-            $table->string('PAimage');
-            $table->integer('PAcategory');
+            $table->increments('paid');
+            $table->string('paname');
+            $table->integer('pavalue');
+            $table->text('padetail');
+            $table->string('pafilter');
+            $table->enum('pastatus', ['1', '0']);
+            $table->string('paimage');
+            $table->integer('pacategory');
             $table->timestamps();
         });
     }

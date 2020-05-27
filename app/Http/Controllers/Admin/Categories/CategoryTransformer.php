@@ -15,15 +15,15 @@ class CategoryTransformer extends TransformerAbstract
     public function transform(Category $category)
     {
         return [
-            'id' => $category->id,
-            'pid' => $category->Cpid,
+            'categoryId' => $category->Cid,
+            'productId' => $category->Cpid,
             'name' => $category->Cname,
             'detail' => $category->Cdetail,
             'image' => $category->Cimage,
             'status' => $category->Cstatus,
-            'metatitle' => $category->Cmetatitle,
-            'metakeyword' => $category->Cmetakeyword,
-            'metadescription' => $category->Cmetadescription,
+            'metaTitle' => $category->Cmetatitle,
+            'metaKeyword' => $category->Cmetakeyword,
+            'metaDescription' => $category->Cmetadescription,
             'created_at' => $category->created_at,
             'updated_at' => $category->updated_at,
         ];
@@ -32,15 +32,15 @@ class CategoryTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'pid' => 'Cpid',
+            'categoryId' => 'Cid',
+            'productId' => 'Cpid',
             'name' => 'Cname',
             'detail' => 'Cdetail',
             'image' => 'Cimage',
             'status' => 'Cstatus',
-            'metatitle' => 'Cmetatitle',
-            'metakeyword' => 'Cmetakeyword',
-            'metadescription' => 'Cmetadescription',
+            'metaTitle' => 'Cmetatitle',
+            'metaKeyword' => 'Cmetakeyword',
+            'metaDescription' => 'Cmetadescription',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -51,15 +51,15 @@ class CategoryTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'Cpid' => 'pid',
+            'Cid' => 'categoryId',
+            'Cpid' => 'productId',
             'Cname' => 'name',
             'Cdetail' => 'detail',
             'Cimage' => 'image',
             'Cstatus' => 'status',
-            'Cmetatitle' => 'metatitle',
-            'Cmetakeyword' => 'metakeyword',
-            'Cmetadescription' => 'metadescription',
+            'Cmetatitle' => 'metaTitle',
+            'Cmetakeyword' => 'metaKeyword',
+            'Cmetadescription' => 'metaDescription',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductAttributeRelation extends Model
 {
-    protected $fillable = ['parpid', 'paraid', 'parvid'];
+    protected $fillable = ['parid', 'parpid', 'paraid', 'parvid'];
+
+    protected $primaryKey = 'parid';
 
     public $transformer = ProductAttributeRelationTransformer::class;
 

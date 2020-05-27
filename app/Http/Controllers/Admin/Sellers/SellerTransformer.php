@@ -14,7 +14,7 @@ class SellerTransformer extends TransformerAbstract
     public function transform(Seller $seller)
     {
         return [
-            'id' => $seller->id,
+            'sellerId' => $seller->sid,
             'name' => $seller->sname,
             'email' => $seller->semail,
             'image' => $seller->simage,
@@ -23,12 +23,12 @@ class SellerTransformer extends TransformerAbstract
             'city' => $seller->scity,
             'state' => $seller->sstate,
             'zipcode' => $seller->szipcode,
-            'googleid' => $seller->sgoogleid,
-            'faceboookid' => $seller->sfaceboookid,
-            'linkedinid' => $seller->slinkedinid,
+            'googleId' => $seller->sgoogleid,
+            'faceboookId' => $seller->sfaceboookid,
+            'linkedInId' => $seller->slinkedinid,
             'status' => $seller->sstatus,
             'phone' => $seller->sphone,
-            'alternatephone' => $seller->salternatephone,
+            'alternatePhone' => $seller->salternatephone,
             'created_at' => $seller->created_at,
             'updated_at' => $seller->updated_at,
         ];
@@ -37,7 +37,7 @@ class SellerTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
+            'sellerId' => 'sid',
             'name' => 'sname',
             'email' => 'semail',
             'image' => 'simage',
@@ -46,12 +46,12 @@ class SellerTransformer extends TransformerAbstract
             'city' => 'scity',
             'state' => 'sstate',
             'zipcode' => 'szipcode',
-            'googleid' => 'sgoogleid',
-            'faceboookid' => 'sfaceboookid',
-            'linkedinid' => 'slinkedinid',
+            'googleId' => 'sgoogleid',
+            'faceboookId' => 'sfaceboookid',
+            'linkedInId' => 'slinkedinid',
             'status' => 'sstatus',
             'phone' => 'sphone',
-            'alternatephone' => 'salternatephone',
+            'alternatePhone' => 'salternatephone',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -71,12 +71,12 @@ class SellerTransformer extends TransformerAbstract
             'scity' => 'city',
             'sstate' => 'state',
             'szipcode' => 'zipcode',
-            'sgoogleid' => 'googleid',
-            'sfaceboookid' => 'faceboookid',
-            'slinkedinid' => 'linkedinid',
+            'sgoogleid' => 'googleId',
+            'sfaceboookid' => 'faceboookId',
+            'slinkedinid' => 'linkedInId',
             'sstatus' => 'status',
             'sphone' => 'phone',
-            'salternatephone' => 'alternatephone',
+            'salternatephone' => 'alternatePhone',
             'sreated_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

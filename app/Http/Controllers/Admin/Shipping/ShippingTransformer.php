@@ -14,22 +14,22 @@ class ShippingTransformer extends TransformerAbstract
     public function transform(Shipping $shipping)
     {
         return [
-            'id' => $shipping->id,
-            'Title' => $shipping->sptitle,
-            'Rate' => $shipping->sprate,
-            'State' => $shipping->spstate,
-            'Active' => $shipping->spactive,
+            'shippingId' => $shipping->spid,
+            'title' => $shipping->sptitle,
+            'rate' => $shipping->sprate,
+            'state' => $shipping->spstate,
+            'active' => $shipping->spactive,
         ];
     }
 
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'Title' => 'sptitle',
-            'Rate' => 'sprate',
-            'State' => 'spstate',
-            'Active' => 'spactive',
+            'shippingId' => 'spid',
+            'title' => 'sptitle',
+            'rate' => 'sprate',
+            'state' => 'spstate',
+            'active' => 'spactive',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -40,11 +40,11 @@ class ShippingTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'sptitle' => 'Title',
-            'sprate' => 'Rate',
-            'spstate' => 'State',
-            'spactive' => 'Active',
+            'spid' => 'shippingId',
+            'sptitle' => 'title',
+            'sprate' => 'rate',
+            'spstate' => 'state',
+            'spactive' => 'active',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

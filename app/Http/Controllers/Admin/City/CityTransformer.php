@@ -14,20 +14,20 @@ class CityTransformer extends TransformerAbstract
     public function transform(City $city)
     {
         return [
-            'id' => $city->id,
-            'Name' => $city->cityname,
-            'Code' => $city->citycode,
-            'Status' => $city->cityactive,
+            'cityId' => $city->cityid,
+            'name' => $city->cityname,
+            'code' => $city->citycode,
+            'status' => $city->cityactive,
         ];
     }
 
     public static function originalAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'Name' => 'cityname',
-            'Code' => 'citycode',
-            'Status' => 'cityactive',
+            'cityId' => 'cityid',
+            'name' => 'cityname',
+            'code' => 'citycode',
+            'status' => 'cityactive',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];
@@ -38,10 +38,10 @@ class CityTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id' => 'id',
-            'cityname' => 'Name',
-            'citycode' => 'Code',
-            'cityactive' => 'Status',
+            'cityid' => 'cityId',
+            'cityname' => 'name',
+            'citycode' => 'code',
+            'cityactive' => 'status',
             'created_at' => 'created_at',
             'updated_at' => 'updated_at',
         ];

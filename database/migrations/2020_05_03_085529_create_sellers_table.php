@@ -14,7 +14,7 @@ class CreateSellersTable extends Migration
     public function up()
     {
         Schema::create('sellers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('sid');
             $table->string('sname');
             $table->string('semail');
             $table->string('simage')->nullable();

@@ -14,7 +14,7 @@ class CreateShippingsTable extends Migration
     public function up()
     {
         Schema::create('shippings', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('spid');
             $table->string('sptitle');
             $table->float('sprate');
             $table->integer('spstate');

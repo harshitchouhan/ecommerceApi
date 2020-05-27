@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Discount extends Model
 {
-    protected $fillable = ['dname', 'dcode', 'dvalue', 'dtype', 'duses', 'dstartdate', 'dexpirydate', 'dactive', 'dbasis'];
+    protected $fillable = ['did', 'dname', 'dcode', 'dvalue', 'dtype', 'duses', 'dstartdate', 'dexpirydate', 'dactive', 'dbasis'];
+
+    protected $primaryKey = 'did';
 
     public $transformer = DiscountTransformer::class;
 

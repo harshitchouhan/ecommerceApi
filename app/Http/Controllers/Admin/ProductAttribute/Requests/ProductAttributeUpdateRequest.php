@@ -24,10 +24,10 @@ class ProductAttributeUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'PAname' => 'max:150',
-            'PAvalue' => 'integer',
-            'PAdetail' => 'max:1000',
-            'PAimage' => 'image|mimes:png,jpg|max:2048'
+            'paname' => 'max:150',
+            'pavalue' => 'integer',
+            'padetail' => 'max:1000',
+            'paimage' => 'image|mimes:png,jpg|max:2048'
         ];
     }
 }
