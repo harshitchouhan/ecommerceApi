@@ -34,4 +34,4 @@ Route::resource('shipping', 'Admin\Shipping\ShippingController');
 Route::resource('wishlist', 'Admin\Wishlist\WishlistController');
 Route::resource('orders', 'Admin\Orders\OrdersController');
 Route::resource('ordercart', 'Admin\OrderCart\OrderCartController');
-Route::resource('CMS', 'Admin\CMS\CMSController');
+Route::resource('cms', 'Admin\CMS\CMSController');

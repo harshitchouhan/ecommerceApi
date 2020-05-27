@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCMSSTable extends Migration
+class CreateCmsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateCMSSTable extends Migration
      */
     public function up()
     {
-        Schema::create('c_m_s_s', function (Blueprint $table) {
+        Schema::create('cms', function (Blueprint $table) {
             $table->bigIncrements('cid');
             $table->string('cpagetitle');
             $table->text('cpagedescription');
             $table->text('ctemplate');
-            $table->string('cpageurl');
+            $table->text('cpageurl');
             $table->string('cmetatitle');
             $table->text('cmetadecription');
-            $table->text('cmetakeyword');
+            $table->string('cmetakeyword');
             $table->enum('cactive', ['1', '0']);
             $table->timestamps();
         });
@@ -34,6 +34,6 @@ class CreateCMSSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('c_m_s_s');
+        Schema::dropIfExists('cms');
     }
 }

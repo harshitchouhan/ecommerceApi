@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\Brands\Brand;
 use App\Http\Controllers\Admin\Categories\Category;
 use App\Http\Controllers\Admin\City\City;
-use App\Http\Controllers\Admin\CMS\CMS;
+use App\Http\Controllers\Admin\CMS\cms;
 use App\Http\Controllers\Admin\CustomerAddress\CustomerAddress;
 use App\Http\Controllers\Admin\Customers\Customer;
 use App\Http\Controllers\Admin\Discounts\Discount;
@@ -63,6 +63,6 @@ class DatabaseSeeder extends Seeder
         factory(Wishlist::class, $WishlistQuantity)->create();
         factory(Order::class, $OrdersQuantity)->create();
         factory(OrderCart::class, $OrderCartsQuantity)->create();
-        factory(CMS::class, $CMSQuantity)->create();
+        factory(cms::class, $CMSQuantity)->create();
     }
 }
