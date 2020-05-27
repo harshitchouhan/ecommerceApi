@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Http\Controllers\Admin\Orders\Orders;
+use App\Http\Controllers\Admin\Orders\Order;
 use Faker\Generator as Faker;
 
-$factory->define(Orders::class, function (Faker $faker) {
+$factory->define(Order::class, function (Faker $faker) {
     return [
         'ocustomername' => $faker->name(),
         'ocid' => $faker->randomNumber(),

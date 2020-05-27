@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\City\City;
 use App\Http\Controllers\Admin\CustomerAddress\CustomerAddress;
 use App\Http\Controllers\Admin\Customers\Customer;
 use App\Http\Controllers\Admin\Discounts\Discount;
-use App\Http\Controllers\Admin\Orders\Orders;
+use App\Http\Controllers\Admin\Orders\Order;
 use App\Http\Controllers\Admin\ProductAttribute\ProductAttribute;
 use App\Http\Controllers\Admin\ProductAttributeRelations\ProductAttributeRelation;
 use App\Http\Controllers\Admin\ProductAttributeValues\ProductAttributeValue;
@@ -43,20 +43,20 @@ class DatabaseSeeder extends Seeder
         $WishlistQuantity = 10;
         $OrdersQuantity = 10;
 
-        // factory(Brand::class, $brandsQuantity)->create();
-        // factory(Category::class, $CategoriesQuantity)->create();
-        // factory(Product::class, $ProductsQuantity)->create();
-        // factory(ProductAttribute::class, $ProductAttributeQuantity)->create();
-        // factory(ProductAttributeRelation::class, $ProductAttributeRelationQuantity)->create();
-        // factory(Customer::class, $CustomerQuantity)->create();
-        // factory(Seller::class, $SellersQuantity)->create();
-        // factory(ProductAttributeValue::class, $ProductAttributeValueQuantity)->create();
-        // factory(CustomerAddress::class, $CustomerAddressQuantity)->create();
-        // factory(City::class, $CitiesQuantity)->create();
-        // factory(State::class, $StatesQuantity)->create();
-        // factory(Discount::class, $DiscountsQuantity)->create();
-        // factory(Shipping::class, $ShippingQuantity)->create();
-        // factory(Wishlist::class, $WishlistQuantity)->create();
-        factory(Orders::class, $OrdersQuantity)->create();
+        factory(Brand::class, $brandsQuantity)->create();
+        factory(Category::class, $CategoriesQuantity)->create();
+        factory(Product::class, $ProductsQuantity)->create();
+        factory(ProductAttribute::class, $ProductAttributeQuantity)->create();
+        factory(ProductAttributeRelation::class, $ProductAttributeRelationQuantity)->create();
+        factory(Customer::class, $CustomerQuantity)->create();
+        factory(Seller::class, $SellersQuantity)->create();
+        factory(ProductAttributeValue::class, $ProductAttributeValueQuantity)->create();
+        factory(CustomerAddress::class, $CustomerAddressQuantity)->create();
+        factory(City::class, $CitiesQuantity)->create();
+        factory(State::class, $StatesQuantity)->create();
+        factory(Discount::class, $DiscountsQuantity)->create();
+        factory(Shipping::class, $ShippingQuantity)->create();
+        factory(Wishlist::class, $WishlistQuantity)->create();
+        factory(Order::class, $OrdersQuantity)->create();
     }
 }
