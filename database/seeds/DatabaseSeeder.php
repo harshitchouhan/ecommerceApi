@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Brands\Brand;
 use App\Http\Controllers\Admin\Categories\Category;
 use App\Http\Controllers\Admin\City\City;
+use App\Http\Controllers\Admin\CMS\CMS;
 use App\Http\Controllers\Admin\CustomerAddress\CustomerAddress;
 use App\Http\Controllers\Admin\Customers\Customer;
 use App\Http\Controllers\Admin\Discounts\Discount;
@@ -44,22 +45,24 @@ class DatabaseSeeder extends Seeder
         $WishlistQuantity = 10;
         $OrdersQuantity = 10;
         $OrderCartsQuantity = 10;
+        $CMSQuantity = 10;
 
-        // factory(Brand::class, $brandsQuantity)->create();
-        // factory(Category::class, $CategoriesQuantity)->create();
-        // factory(Product::class, $ProductsQuantity)->create();
-        // factory(ProductAttribute::class, $ProductAttributeQuantity)->create();
-        // factory(ProductAttributeRelation::class, $ProductAttributeRelationQuantity)->create();
-        // factory(Customer::class, $CustomerQuantity)->create();
-        // factory(Seller::class, $SellersQuantity)->create();
-        // factory(ProductAttributeValue::class, $ProductAttributeValueQuantity)->create();
-        // factory(CustomerAddress::class, $CustomerAddressQuantity)->create();
-        // factory(City::class, $CitiesQuantity)->create();
-        // factory(State::class, $StatesQuantity)->create();
-        // factory(Discount::class, $DiscountsQuantity)->create();
-        // factory(Shipping::class, $ShippingQuantity)->create();
-        // factory(Wishlist::class, $WishlistQuantity)->create();
-        // factory(Order::class, $OrdersQuantity)->create();
+        factory(Brand::class, $brandsQuantity)->create();
+        factory(Category::class, $CategoriesQuantity)->create();
+        factory(Product::class, $ProductsQuantity)->create();
+        factory(ProductAttribute::class, $ProductAttributeQuantity)->create();
+        factory(ProductAttributeRelation::class, $ProductAttributeRelationQuantity)->create();
+        factory(Customer::class, $CustomerQuantity)->create();
+        factory(Seller::class, $SellersQuantity)->create();
+        factory(ProductAttributeValue::class, $ProductAttributeValueQuantity)->create();
+        factory(CustomerAddress::class, $CustomerAddressQuantity)->create();
+        factory(City::class, $CitiesQuantity)->create();
+        factory(State::class, $StatesQuantity)->create();
+        factory(Discount::class, $DiscountsQuantity)->create();
+        factory(Shipping::class, $ShippingQuantity)->create();
+        factory(Wishlist::class, $WishlistQuantity)->create();
+        factory(Order::class, $OrdersQuantity)->create();
         factory(OrderCart::class, $OrderCartsQuantity)->create();
+        factory(CMS::class, $CMSQuantity)->create();
     }
 }
