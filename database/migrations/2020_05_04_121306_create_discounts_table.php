@@ -20,8 +20,8 @@ class CreateDiscountsTable extends Migration
             $table->integer('dvalue');
             $table->string('dtype');
             $table->integer('duses');
-            $table->timestamp('dstartdate');
-            $table->timestamp('dexpirydate');
+            $table->timestamp('dstartdate')->nullable();
+            $table->timestamp('dexpirydate')->nullable();
             $table->enum('dactive', ['1', '0']);
             $table->enum('dbasis', ['1', '0']);
             $table->timestamps();

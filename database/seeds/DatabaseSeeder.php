@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\City\City;
 use App\Http\Controllers\Admin\CustomerAddress\CustomerAddress;
 use App\Http\Controllers\Admin\Customers\Customer;
 use App\Http\Controllers\Admin\Discounts\Discount;
+use App\Http\Controllers\Admin\Orders\Orders;
 use App\Http\Controllers\Admin\ProductAttribute\ProductAttribute;
 use App\Http\Controllers\Admin\ProductAttributeRelations\ProductAttributeRelation;
 use App\Http\Controllers\Admin\ProductAttributeValues\ProductAttributeValue;
@@ -40,6 +41,7 @@ class DatabaseSeeder extends Seeder
         $DiscountsQuantity = 10;
         $ShippingQuantity = 10;
         $WishlistQuantity = 10;
+        $OrdersQuantity = 10;
 
         // factory(Brand::class, $brandsQuantity)->create();
         // factory(Category::class, $CategoriesQuantity)->create();
@@ -54,6 +56,7 @@ class DatabaseSeeder extends Seeder
         // factory(State::class, $StatesQuantity)->create();
         // factory(Discount::class, $DiscountsQuantity)->create();
         // factory(Shipping::class, $ShippingQuantity)->create();
-        factory(Wishlist::class, $WishlistQuantity)->create();
+        // factory(Wishlist::class, $WishlistQuantity)->create();
+        factory(Orders::class, $OrdersQuantity)->create();
     }
 }
